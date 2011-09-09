@@ -1,0 +1,13 @@
+/dev/ttyUSB1
+
+gcc -o weather_listener -DWITHMYSQL $(mysql_config --cflags) weather.c $(mysql_config --libs)
+gcc -o weather_listener  weather.c
+
+
+gcc -o jeelink_listener -DWITHMYSQL $(mysql_config --cflags) jeelink_listener_lamp64.c $(mysql_config --libs)
+
+
+
+/home/goran/project/jeelink_listen/jeelink_listener /dev/ttyUSB1
+
+
