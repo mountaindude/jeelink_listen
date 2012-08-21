@@ -1,13 +1,16 @@
-/dev/ttyUSB1
-
-gcc -o weather_listener -DWITHMYSQL $(mysql_config --cflags) weather.c $(mysql_config --libs)
-gcc -o weather_listener  weather.c
-
-
+Compile with MySQL support:
 gcc -o jeelink_listener -DWITHMYSQL $(mysql_config --cflags) jeelink_listener_lamp64.c $(mysql_config --libs)
 
+Compile without MySQL support:
+gcc -o jeelink_listener jeelink_listener_lamp64.c
 
 
+Syntax:
 /home/goran/project/jeelink_listen/jeelink_listener /dev/ttyUSB1
 
+
+
+Note:
+- There must be a JeeLink attached to a USB port of the computer that is running jeelink_listener.
+- The JeeLink must be running the sketch available at https://github.com/mountaindude/SP53-JeeLink-receive-energy.git
 
