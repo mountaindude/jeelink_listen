@@ -257,7 +257,7 @@ int main(int argc, char *argv[]) {
 			case 25:
 				printf("JeeNode temp meter\n");
 
-				char *
+//				char *
 				break;
                         case 1: 
 				printf("Electricity energy meter\n");
